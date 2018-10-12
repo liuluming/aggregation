@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="channel_mode">
+        <item>网络适配器1</item>
+        <item>网络适配器2</item>
+        <item>网络适配器3</item>
+    </string-array>
+    <string-array name="aggregate_mode">
+        <item>广播</item>
+        <item>叠加</item>
+        <item>主备</item>
+    </string-array>
+    <string-array name="service_mode">
+        <item>聚合链路</item>
+        <item>网络适配器</item>
+    </string-array>
+    <string-array name="protocol_mode">
+        <item>TCP</item>
+        <item>UDP</item>
+    </string-array>
+    <string-array name="net_protocol_mode">
+        <item>@string/DHCP</item>
+        <item>@string/STATIC_IP</item>
+    </string-array>
+    <!--<item>@string/PPPOE</item>-->
+</resources>

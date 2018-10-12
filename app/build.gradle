@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.synertone.aggregation"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    configurations.all{
+        resolutionStrategy {
+            force 'com.android.support:support-v4:26.1.0'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':pullToRefreshLibrary')
+    implementation project(':nicedialog')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation files('libs/volley.jar')
+    implementation files('libs/xUtils-2.6.14.jar')
+    implementation files('libs/litepal-1.5.1.jar')
+    implementation 'com.google.code.gson:gson:2.2.4'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:26.1.0'
+    /* compile files('libs/android-support-v13.jar')*/
+    implementation 'com.github.ithedan:CustomViewBgUi:v1.0'
+    /*   compile 'com.android.support:appcompat-v7:21.0.3'*/
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+}
